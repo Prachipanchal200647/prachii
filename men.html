@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rewear Clothing - Men & Kids</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Moved directly here for demo; you can keep this in styles.css */
+    .product-grid.four-per-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html">Women</a>
+    <a href="men.html">Men</a>
+    <a href="kids.html">Kids</a>
+  </nav>
+
+  <!-- Mission Banner -->
+  <div class="mission-banner">
+    <h2>Style Sustainably – Men's & Kids' Pre-loved Picks</h2>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar-wrapper">
+    <div class="search-bar">
+      <input type="text" placeholder="Search for men's or kids' fashion..." />
+      <button>🔍</button>
+    </div>
+  </div>
+
+  <!-- Product Sections -->
+  <section class="similar-products">
+    <h2>Men's Clothing</h2>
+    <div class="product-grid four-per-row">
+      <div class="product-card">
+        <img src="men.jpj.jpg" alt="Men Shirt" />
+        <h4>Denim Shirt</h4>
+        <div class="price">₹499 <del>₹999</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="men2.jpj.avif" alt="T-shirt" />
+        <h4>Basic White Tee</h4>
+        <div class="price">₹299 <del>₹650</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="images/men3.jpg" alt="Jacket" />
+        <h4>Casual Jacket</h4>
+        <div class="price">₹799 <del>₹1799</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="images/men4.jpg" alt="Jeans" />
+        <h4>Blue Jeans</h4>
+        <div class="price">₹699 <del>₹1599</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 60px;">Kids' Clothing</h2>
+    <div class="product-grid four-per-row">
+      <div class="product-card">
+        <img src="kid.jpj.jpeg" alt="Hoodie" />
+        <h4>Cartoon Hoodie</h4>
+        <div class="price">₹399 <del>₹850</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="kid2.jpj.jpeg" alt="T-shirt" />
+        <h4>Superhero Tee</h4>
+        <div class="price">₹259 <del>₹499</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="images/kid3.jpg" alt="Shorts" />
+        <h4>Summer Shorts</h4>
+        <div class="price">₹199 <del>₹449</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="images/kid4.jpg" alt="Dress" />
+        <h4>Floral Dress</h4>
+        <div class="price">₹349 <del>₹899</del></div>
+        <div class="eco-badge">Eco-Friendly</div>
+        <button>Add to Bag</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
