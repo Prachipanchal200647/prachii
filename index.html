@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clothing Product Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f6f9fc, #e0f7fa, #c8e6f9);
+      color: #333;
+    }
+
+    .search-bar-wrapper {
+      padding: 14px 40px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 10px 16px;
+      border: none;
+      background-color: #f4f4f4;
+      cursor: pointer;
+    }
+
+    .product-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      padding: 40px;
+      background-color: #e9eaec;
+    }
+
+    .product-image {
+      flex: 1;
+      max-width: 10%;
+    }
+
+    .product-image img {
+      width: 200%;
+      border-radius: 50px;
+    }
+
+    .product-details {
+      flex: 1;
+      margin-left: 200px;
+    }
+
+    .product-details h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .price-section {
+      margin: 20px 0;
+      font-size: 20px;
+    }
+
+    .price-section del {
+      color: gray;
+      margin: 0 10px;
+    }
+
+    .discount {
+      color: #ff5722;
+      font-weight: bold;
+    }
+
+    .tax-note {
+      color: green;
+      font-size: 14px;
+    }
+
+    .sizes {
+      display: flex;
+      gap: 12px;
+      margin: 15px 0;
+    }
+
+    .size-btn {
+      padding: 8px 14px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      background: white;
+      cursor: pointer;
+    }
+
+    .action-buttons {
+      margin: 20px 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn-primary {
+      padding: 12px 30px;
+      background-color: #ff3f6c;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-secondary {
+      padding: 12px 30px;
+      border: 1px solid #ccc;
+      background: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .delivery-section {
+      margin-top: 20px;
+    }
+
+    .check-text {
+      color: red;
+      font-weight: bold;
+    }
+
+    .similar-products {
+      padding: 40px;
+      background-color: #f1f1f1;
+    }
+
+    .similar-products h2 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .product-grid.six-per-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+
+    .product-card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .product-card h4 {
+      font-size: 15px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #2e7d32;
+    }
+
+    .price del {
+      color: gray;
+      margin-left: 5px;
+      font-size: 13px;
+    }
+
+    .eco-badge {
+      display: inline-block;
+      margin: 8px 0;
+      padding: 4px 10px;
+      background: #d1f3e0;
+      color: #2e7d32;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      background-color: #ff3f6c;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-bar-wrapper">
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products, brands and more" />
+      <button>🔍</button>
+    </div>
+  </div>
+
+  <div class="product-wrapper">
+    <div class="product-image">
+      <img src="onepiece.jpg" alt="Pink Dress" />
+    </div>
+    <div class="product-details">
+
+      <h4>FabIndia • Gently Used</h4>
+        <span class="eco-badge">♻️ Saved 2.1kg CO₂</span>
+      <div class="price-section">
+        ₹883 <del>₹3840</del> <span class="discount">(77% OFF)</span>
+        <div class="tax-note">inclusive of all taxes</div>
+      </div>
+
+      <strong>SELECT SIZE</strong>
+      <div class="sizes">
+        <div class="size-btn">XS</div>
+        <div class="size-btn">S</div>
+        <div class="size-btn">M</div>
+        <div class="size-btn">L</div>
+        <div class="size-btn">XL</div>
+        <div class="size-btn">XXL</div>
+        <div class="size-btn">3XL</div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn-primary">ADD TO BAG</button>
+        <button class="btn-secondary">♡ WISHLIST</button>
+      </div>
+
+      <div class="delivery-section">
+        <strong>DELIVERY OPTIONS</strong><br /><br />
+        <input type="text" placeholder="Enter pincode" />
+        <span class="check-text">Check</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="similar-products">
+    <h2>Similar Products</h2>
+    <div class="product-grid six-per-row">
+      <div class="product-card">
+        <img src="black.jpg" alt="Sample Dress" />
+        <h4>Zara • Like New</h4>
+        <p class="price">₹450 <del>₹1299</del></p>
+        <span class="eco-badge">♻️ Saved 1.2kg CO₂</span>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="black.jpj.jpeg" alt="Sample Dress" />
+        <h4>H&M • Gently Used</h4>
+        <p class="price">₹599 <del>₹1899</del></p>
+        <span class="eco-badge">♻️ Saved 1.8kg CO₂</span>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="Merlot.jpj.webp" alt="Sample Dress" />
+        <h4>Levi's • Like New</h4>
+        <p class="price">₹799 <del>₹2499</del></p>
+        <span class="eco-badge">♻️ Saved 2.5kg CO₂</span>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+         <img src="forever2.jpj.jpeg" alt="Sample Dress" />
+        <h4>Forever 21 • Vintage</h4>
+        <p class="price">₹349 <del>₹1399</del></p>
+        <span class="eco-badge">♻️ Saved 1.6kg CO₂</span>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="urbanic.jpj.jpg" alt="Sample Dress" />
+        <h4>Urbanic • Like New</h4>
+        <p class="price">₹699 <del>₹2099</del></p>
+        <span class="eco-badge">♻️ Saved 2.2kg CO₂</span>
+        <button>Add to Bag</button>
+      </div>
+      <div class="product-card">
+        <img src="fabindia.jpj.webp" alt="Sample Dress" />
+        <h4>FabIndia • Gently Used</h4>
+        <p class="price">₹399 <del>₹1699</del></p>
+        <span class="eco-badge">♻️ Saved 2.1kg CO₂</span>
+        <button>Add to Bag</button>
+      </div>
+      <a href="men.html" class="btn-men-link">Shop Men’s Collection →</a>
+      
+    </div>
+  </section>
+</body>
+</html>
