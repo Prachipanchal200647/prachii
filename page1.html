@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login – Modern Style</title>
+  <link rel="stylesheet" href="page1.css">
+</head>
+<body>
+  <div class="login-wrapper">
+    <h1 class="title">Login</h1>
+    <nav class="breadcrumb">Home <span>|</span> <strong>Login</strong></nav>
+
+    <div class="login-container">
+      <!-- New Customers -->
+      <div class="box new-customer">
+        <h2>New Customers</h2>
+        <p>
+            Create an account to checkout faster, save multiple shipping addresses,
+             and easily view and track your orders.
+        </p>
+        <a href="RegistrationPage.html" class="btn">Create an Account</a>
+      </div>
+
+
+      <!-- Registered Customers -->
+      <div class="box login-form">
+        <h2>Login Customers</h2>
+        <p>If you have an account with us, please log in.</p>
+        <form method="post" action="#">
+          <label for="email">Email *</label>
+          <input type="email" id="email" required>
+
+          <label for="password">Password *</label>
+          <input type="password" id="password" required>
+
+          <button type="submit" class="btn">Sign In</button>
+
+          <div class="form-footer">
+            <a href="forget.html">Forgot your password?</a>
+            <span> | </span>
+            <a href="RegistrationPage.html">Create account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

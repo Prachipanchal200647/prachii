@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+  }
+  
+  .dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    background-color: #ddd;
+    border-radius: 50%;
+    background-image: url('https://randomuser.me/api/portraits/men/32.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .add-listing-btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-listing-btn:hover {
+    background-color: #218838;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .item-box {
+    width: calc(25% - 10px);
+    height: 160px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Text inside box */
+  .item-box span {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4px 8px;
+    margin: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* Set background images using nth-child */
+  .my-listings .item-box:nth-child(1) {
+    background-image: url("dress\ 1.jpg");
+  }
+  .my-listings .item-box:nth-child(2) {
+    background-image: url("https://via.placeholder.com/200x160.png?text=Cloth+2");
+  }
+  .my-listings .item-box:nth-child(3) {
+    background-image: url("https://via.placeholder.com/200x160.png?text=Cloth+3");
+  }
+  .my-listings .item-box:nth-child(4) {
+    background-image: url("https://via.placeholder.com/200x160.png?text=Cloth+4");
+  }
+  
+  .my-purchases .item-box:nth-child(1) {
+    background-image: url("https://via.placeholder.com/200x160.png?text=Purchase+1");
+  }
+  .my-purchases .item-box:nth-child(2) {
+    background-image: url("https://via.placeholder.com/200x160.png?text=Purchase+2");
+  }
+  .my-purchases .item-box:nth-child(3) {
+    background-image: url("https://via.placeholder.com/200x160.png?text=Purchase+3");
+  }
+  

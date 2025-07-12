@@ -1,0 +1,117 @@
+/* Reset & Base */
+body {
+    background: #020024;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 15%, rgba(1, 189, 240, 1) 55%, rgba(0, 212, 255, 1) 73%, rgba(0, 255, 238, 1) 92%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #111;
+    padding: 2rem;
+  }
+  
+  /* Wrapper */
+  .login-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .breadcrumb {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  
+  .box {
+    flex: 1 1 45%;
+    background: #fff;
+    padding: 2rem;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: #333;
+  }
+  
+  /* Form Styling */
+  form {
+    margin-top: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Footer Links */
+  .form-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .form-footer a {
+    color: #111;
+    text-decoration: none;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .box {
+      flex: 1 1 100%;
+    }
+  }
+  
